@@ -1,0 +1,25 @@
+form {
+   margin: 10px auto;
+
+   label {
+      display: block;
+      padding-top: 5px;
+   }
+
+   input {
+      margin: 5px auto;
+      display: flex;
+      width: 100%;
+      cursor: pointer;
+
+      &:last-child {
+         outline: none;
+      }
+
+      @media (max-width: 450px) {
+         &:last-child {
+            width: 80%;
+         }
+      }
+   }
+}

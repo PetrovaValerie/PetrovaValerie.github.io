@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./node_modules/vanillajs-datepicker/dist/css/datepicker.min.css" />
+    <title>Recipe</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="recipe">
+            <!-- блок с указанием д-я -->
+            <div class="rp-bttns">
+                <div>
+                    Настоящий рецепт действителен в течение
+                    <!-- data attribute, getAtrib -->
+                    <button class="countBtn" data-days="30">
+                        30 дней
+                    </button>
+                    <button class="countBtn active" data-days="60">
+                        60 дней
+                    </button>
+                </div>
+                <span>(нужное кликнуть)</span>
+            </div>
+            <!-- блок с указанием д-я /end  -->
+            <div class="grid-container">
+                <!-- блок с верхними надписями -->
+                <div class="grid-item top">
+                    <p class="top_txt">
+                        Министерство здравоохранения
+                        Республики Беларусь
+                    </p>
+                    <p class="top_txt">
+                        Штамп организации здравоохранения или печать
+                        индивидуального предпринимателя
+                    </p>
+                </div>
+                <div class="grid-item top">
+                    <p class="top_txt">
+                        <span class="form-numb">Форма 1</span>
+                        Медицинская документация
+                        утверждена
+                        Министерством здравоохранения
+                        Республики Беларусь
+                    </p>
+                    <p class="top_txt">
+                        Код организации здравоохранения или
+                        индивидуального предпринимателя
+                    </p>
+                </div>
+                <!-- блок с верхними надписями /end -->
+                <!-- блок с логикой рецепта -->
+                <div class="grid-item">
+                    <p class="btm_txt">РЕЦЕПТ ВРАЧА</p>
+                </div>
+                <div class="grid-item">
+                    <form>
+                        <label for="firstDay">Рецепт действителен с</label>
+                        <input type="text" name="firstDay" autocomplete="off" />
+
+                        <label for="lastDate">Рецепт действителен до</label>
+                        <input type="text" name="lastDate" id="lastDay" readonly />
+                    </form>
+                </div>
+            </div>
+            <!-- блок с логикой рецепта /end -->
+            <!-- блок с лекарством -->
+            <div class="grid-item patient-data">
+                <p>Фамилия, инициалы пациента</p>
+                <p class="txt_blank"></p>
+                <p>Дата рождения</p>
+                <p class="txt_blank"></p>
+                <p>Фамилия, инициалы врача</p>
+                <p class="txt_blank"></p>
+            </div>
+            <div class="grid-item rp-grid">
+                <div>Rp:</div>
+                <div></div>
+                <div>Rp:</div>
+                <div></div>
+                <div>Rp:</div>
+                <div class="stamp">
+                    <img src="./assets/stamp1.svg" alt="Печать врача" height="70%" />
+                    <span>Подпись врача</span>
+                    <span>Личная печать врача</span>
+                </div>
+            </div>
+            <!-- блок с лекарством /end -->
+        </div>
+    </main>
+    <script src="./node_modules/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+    <script src="./node_modules/vanillajs-datepicker/dist/js/locales/ru.js"></script>
+    <script src="scripts/count.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

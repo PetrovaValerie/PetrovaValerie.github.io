@@ -1,0 +1,32 @@
+.rp-bttns {
+   margin: 0 auto;
+   padding-top: 4px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 1px solid black;
+
+   button {
+      padding: 3px 5px;
+      cursor: pointer;
+      border-radius: 10px;
+
+      .active {
+         background-color: rgb(172, 244, 172);
+      }
+
+      &:hover {
+         background-color: rgb(143, 210, 143);
+      }
+   }
+
+   span {
+      display: block;
+      padding-bottom: 10px;
+
+   }
+}
+
+.active {
+   background-color: rgb(172, 244, 172);
+}

@@ -1,0 +1,14 @@
+.patient-data {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-auto-rows: minmax(50px, 10px);
+   justify-content: center;
+
+   :nth-child(odd) {
+      justify-self: center;
+   }
+
+   .txt_blank {
+      border-bottom: 1px solid black;
+   }
+}

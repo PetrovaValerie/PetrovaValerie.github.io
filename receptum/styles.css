@@ -1,0 +1,172 @@
+.main {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.main .recipe {
+  margin: 0 auto;
+  max-width: 800px;
+  border: 3px solid black;
+}
+
+.main .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(80px, 130px);
+  justify-items: center;
+  grid-column-gap: 2px;
+}
+
+.main .grid-container .grid-item {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  border: 1px solid black;
+}
+
+.main .grid-container .grid-item .top_txt {
+  margin: 1px 0;
+  max-width: 80%;
+  position: relative;
+}
+
+@media (max-width: 655px) {
+  .main .grid-container .grid-item .top_txt {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main .grid-container .grid-item .top_txt:last-child {
+    display: none;
+  }
+}
+
+.main .grid-container .grid-item .form-numb {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: -20%;
+}
+
+.main .grid-container .grid-item .form-numb:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+  .main .grid-container .grid-item .form-numb:last-child {
+    display: none;
+  }
+}
+
+.main .grid-container .grid-item .btm_txt {
+  display: flex;
+  margin: 6px auto;
+}
+
+form {
+  margin: 10px auto;
+}
+
+form label {
+  display: block;
+  padding-top: 5px;
+}
+
+form input {
+  margin: 5px auto;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+form input:last-child {
+  outline: none;
+}
+
+@media (max-width: 450px) {
+  form input:last-child {
+    width: 80%;
+  }
+}
+
+.patient-data {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: minmax(50px, 10px);
+  justify-content: center;
+}
+
+.patient-data :nth-child(odd) {
+  justify-self: center;
+}
+
+.patient-data .txt_blank {
+  border-bottom: 1px solid black;
+}
+
+.rp-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: minmax(100px, 170px);
+}
+
+.rp-grid div {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  margin: 0;
+  padding: 3%;
+}
+
+.rp-grid div:last-child {
+  padding: 3% 1% 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-end;
+}
+
+.rp-grid div:last-child img {
+  position: relative;
+  left: 40%;
+  top: 20%;
+}
+
+.rp-bttns {
+  margin: 0 auto;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.rp-bttns button {
+  padding: 3px 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.rp-bttns button .active {
+  background-color: rgb(172, 244, 172);
+}
+
+.rp-bttns button:hover {
+  background-color: rgb(143, 210, 143);
+}
+
+.rp-bttns span {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.active {
+  background-color: rgb(172, 244, 172);
+}
